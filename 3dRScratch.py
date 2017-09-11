@@ -9,9 +9,28 @@ import sys
 from threading import Thread
 import time
 
+class Th3dRudder_(Thread):
+    
+	def __init__(self):
+		Thread.__init__(self)
+
+	def run(self):
+		global sdk
+		global axis
+		global status
+		
+		loop = 1
+		while(loop):
+			sdk.GetAxis(0,ValueWithCurveNonSymmetricalPitch,axis,curve)
+			status=sdk.GetStatus(0)
+			time.sleep(30.0 / 1000.0)
+
 
 class Server3dR:
 	def __init__(self):
+		global sdk
+		global axis
+		global status
 		self.foo = 0
 
 	def _problem(self):
@@ -27,16 +46,28 @@ class Server3dR:
 
 	@reporter("3dRudder_Version")
 	def Py3dRudder_Version(self):
-		return hex(sdk.GetVersion(0))
+		if(sdk.IsDeviceConnected(0)):
+			return '%02x' % sdk.GetVersion(0)
+		else:
+			return 'NCon'
 
 	@reporter("3dRudder_Status_Code")
 	def Py3dRudder_Status_Code(self):
-		return sdk.GetStatus(0)
+		sIndex=sdk.GetStatus(0)
+		if(sIndex<0 or sIndex>7):
+			sIndex=0
+		return sIndex
 	
 	@reporter("3dRudder_Status")
 	def Py3dRudder_Status(self):
-		StatusText=['No Status','Do not put your feet on','Initialization','Put Your Feet On','Put Second Foot On','Stay Still','In Use','Extended Mode']
-		return StatusText[sdk.GetStatus(0)]
+		if(sdk.IsDeviceConnected(0)):
+			StatusText=['No Status','Do not put your feet on','Initialization','Put Your Feet On','Put Second Foot On','Stay Still','In Use','Extended Mode']
+			sIndex=sdk.GetStatus(0)
+			if(sIndex<0 or sIndex>7):
+				sIndex=0
+			return StatusText[sIndex]
+		else:
+			return 'Not Connected'
 
 	@reporter("3dRudder_Axis_AX")
 	def Py3dRudder_Axis_AX(self):
@@ -59,26 +90,7 @@ class Server3dR:
 		err=sdk.PlaySndEx(0,str(s),b)
 		print (err)
 
-class Th3dRudder_(Thread):
 
-	def __init__(self):
-		Thread.__init__(self)
-
-	def run(self):
-		global sdk
-		global axis
-		global status
-		
-		sdk=GetSDK()
-		sdk.Init()
-		axis = Axis()
-		curve = CurveArray()
-		status=NoStatus
-		loop = 1
-		while(loop):
-			sdk.GetAxis(0,ValueWithCurveNonSymmetricalPitch,axis,curve)
-			status=sdk.GetStatus(0)
-			time.sleep(30.0 / 1000.0)
 
 
 
@@ -93,6 +105,15 @@ descriptor = Descriptor(
 extension = Extension(Server3dR, descriptor)
 
 if __name__ == "__main__":
+	global sdk
+	global axis
+	global status
+
+	sdk=GetSDK()
+	sdk.Init()
+	axis = Axis()
+	curve = CurveArray()
+	status=NoStatus
 
 	threadPy3dRudder_=Th3dRudder_()
 	threadPy3dRudder_.start()

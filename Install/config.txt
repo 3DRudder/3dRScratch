@@ -1,0 +1,5 @@
+﻿;!@Install@!UTF-8!
+Title="3dRudder Scratch Local Server"
+;BeginPrompt="Do you want to start it ?"
+RunProgram="dist\3dRScratch\3dRScratch.exe"
+;!@InstallEnd@!
