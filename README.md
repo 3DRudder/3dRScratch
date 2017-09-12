@@ -11,3 +11,9 @@ clicker "Importe experimental http extension"  et charger le fichier "Scratch 3d
 - loader le projet "movecat.sb2" ou faire un autre projet ... 
 
 - enjoy ! 
+
+
+## Samples
+
+- movecat.sb2
+- 3dRudder_PongStarter.sb2
