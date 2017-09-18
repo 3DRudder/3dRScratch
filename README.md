@@ -3,12 +3,18 @@
 - Installer Scrach Offline : https://scratch.mit.edu/scratch2download/ 
 - use the files of this repository or download https://3drudder-download.com/Internal/3dRScratch.zip and unzip it 
 - Start Scrach Offine and do shift+ clicker File  :
-Images intégrées 1
-click "Importe experimental http extension"  and load the file "Scratch 3dRudder English.s2e" (use the port 1280) 
+ click "Importe experimental http extension"  and load the file "Scratch 3dRudder English.s2e" 
+![Importe experimental http extension](https://github.com/3DRudder/3dRScratch/blob/master/image/load%20ext.png?raw=true "Importe experimental http extension")
 
-- Start 3dRScratch.py ... or 3dRScratch.exe if compiled with pyinstaller 
+
+- Start 3dRScratch.py ... or 3dRScratch.exe if compiled with pyinstaller (It will use the port 1280) 
 
 - Load the project "movecat.sb2" or do an other project from scratch ... 
+
+![movecat.sb2](https://github.com/3DRudder/3dRScratch/blob/master/image/ScratchSample.png?raw=true "movecat.sb2")
+
+- Click the Start Button 
+![Start Button ](https://github.com/3DRudder/3dRScratch/blob/master/image/ScratchButtonPlay.png?raw=true "Start Button")
 
 - enjoy ! 
 
@@ -26,4 +32,6 @@ You need to install pyinstaller and execute CreateVersion.bat
 
 install blockext with blockext-master\setup.py 
 
+## License
 
+3DRudder - All copyrights reserved.
