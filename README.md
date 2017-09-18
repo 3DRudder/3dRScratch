@@ -27,13 +27,10 @@
 - movecat.sb2
 - 3dRudder_PongStarter.sb2
 
-## Do exe file 
+## To use 3dRScratch.py or to do 3dRScratch.exe
 
-You need to install pyinstaller and execute CreateVersion.bat
-
-## to use 3dRScratch.py or to do 3dRScratch.exe
-
-install blockext with blockext-master\setup.py 
+- You need to install blockext with blockext-master\setup.py 
+- To do the 3dRScratch.exe You need to install pyinstaller and execute CreateVersion.bat
 
 ## License
 
