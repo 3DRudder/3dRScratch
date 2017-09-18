@@ -1,5 +1,5 @@
 
-![language](https://img.shields.io/badge/Python-green.svg) 
+![language](https://img.shields.io/badge/Language-Python-green.svg) 
 ![Firmware 3dRudder](https://img.shields.io/badge/Firmware%203dRudder-%3E%20v1.3.5.9-brightgreen.svg)
 # 3dRScratch (Using 3dRudder with Scratch Offline) 
 
