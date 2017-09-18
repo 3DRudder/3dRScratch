@@ -1,6 +1,10 @@
 
 ![language](https://img.shields.io/badge/Language-Python-green.svg) 
 ![Firmware 3dRudder](https://img.shields.io/badge/Firmware%203dRudder-%3E%20v1.3.5.9-brightgreen.svg)
+![IDE](https://img.shields.io/badge/IDE-Scratch%202%20OffLine-green.svg)
+![SDK](https://img.shields.io/badge/SDK-3dRudder%201.01-yellow.svg)
+
+
 # 3dRScratch (Using 3dRudder with Scratch Offline) 
 
 - Installer Scrach Offline : https://scratch.mit.edu/scratch2download/ 
