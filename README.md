@@ -7,7 +7,7 @@
 
 # 3dRScratch (Using 3dRudder with Scratch Offline) 
 
-- Installer Scrach Offline : https://scratch.mit.edu/scratch2download/ 
+- Install Scrach Offline : https://scratch.mit.edu/scratch2download/ 
 - use the files of this repository or download https://3drudder-download.com/Internal/3dRScratch.zip and unzip it 
 - Start Scrach Offine and do shift+ clicker File  :
  click "Importe experimental http extension"  and load the file "Scratch 3dRudder English.s2e" 
