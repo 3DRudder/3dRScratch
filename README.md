@@ -47,4 +47,4 @@
 
 ## License
 
-3DRudder - All copyrights reserved.
+3dRudder - All copyrights reserved.
